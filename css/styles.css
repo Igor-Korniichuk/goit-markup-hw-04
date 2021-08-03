@@ -359,6 +359,9 @@ nav {
 .clients-item {
   width: 170px;
   height: 92px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--link-color);
   border-radius: 4px;
 }
@@ -369,11 +372,13 @@ nav {
 
 .clients-link {
   display: flex;
+  width: 106px;
+  height: 60px;
   justify-content: center;
   align-items: center;
 }
 
-.clients-link:hover {
+.clients-item:hover {
   border: 1px solid var(--accent-color);
 }
 
@@ -385,7 +390,7 @@ nav {
   fill: var(--accent-color);
 }
 
-.clients-link:hover .icon-client {
+.clients-item:hover.icon-client {
   color: var(--accent-color);
 }
 /* Footer */

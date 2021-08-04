@@ -111,12 +111,16 @@ img {
 .contacts {
   display: flex;
   margin-left: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .contacts .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  justify-content: center;
+  align-items: center;
 
   color: var(--primary-text-color);
   text-decoration: none;
@@ -198,7 +202,7 @@ nav {
 .icon-features {
   height: 120px;
   padding: 25px 100px;
-  background: var(--white-color);
+  background: #f5f4fa;
   border-radius: 4px;
 }
 
@@ -296,17 +300,9 @@ nav {
   text-align: center;
 }
 
-.social-icon-item {
-  width: 44px;
-  height: 44px;
-  padding: 12px;
-  background-color: var(--white-color);
-  border-radius: 50%;
-}
-
 .social-links {
   display: flex;
-  margin: 16px 32px 30px 32px;
+  margin: 0px 32px 30px 32px;
   padding: 0;
   justify-content: center;
   list-style: none;
@@ -318,8 +314,11 @@ nav {
 }
 
 .icon-link {
+  display: block;
   width: 44px;
   height: 44px;
+  padding: 12px;
+  border-radius: 50%;
   color: var(--link-color);
   background-color: var(--white-color);
   text-align: center;
@@ -337,13 +336,10 @@ nav {
   background-color: var(--accent-color);
 }
 
-/* .icon-instagram:hover,
-.icon-twitter:hover,
-.icon-facebook:hover,
-.icon-linkedin:hover {
-  fill: var(--white-color);
+.icon-link:focus {
+  color: var(--white-color);
   background-color: var(--accent-color);
-} */
+}
 
 /* Our clients */
 
@@ -356,43 +352,34 @@ nav {
   fill: currentColor;
 }
 
-.clients-item {
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--link-color);
-  border-radius: 4px;
-}
-
 .clients .clients-item + .clients-item {
   margin-left: 30px;
 }
 
 .clients-link {
-  display: flex;
-  width: 106px;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-}
-
-.clients-item:hover {
-  border: 1px solid var(--accent-color);
+  display: block;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  color: var(--link-color);
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
 }
 
 .icon-client {
-  fill: var(--link-color);
+  fill: currentColor;
 }
 
-.icon-client:hover {
-  fill: var(--accent-color);
-}
-
-.clients-item:hover.icon-client {
+.clients-link:hover {
   color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
+
+.clients-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
 /* Footer */
 footer {
   background-color: #2f303a;
@@ -423,9 +410,54 @@ address a {
   text-decoration: none;
 }
 
+.footer-contet {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-links p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.footer-links .social-links {
+  margin: 0;
+}
+
+.icon-link.footer-icon {
+  display: block;
+  text-align: center;
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon .icon-instagram,
+.footer-icon .icon-twitter,
+.footer-icon .icon-facebook,
+.footer-icon .icon-linkedin {
+  fill: currentColor;
+}
+
+.icon-link.footer-icon:hover {
+  background-color: var(--accent-color);
+}
+
+.icon-link.footer-icon:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-links {
+  margin-left: 70px;
+}
+
 /* СТИЛИ ДЛЯ ПОРТФОЛИО */
 
-.conteiner.head {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -444,7 +476,7 @@ address a {
   padding: 6px 22px;
   min-width: 73px;
   color: var(--title-text-color);
-  background-color: var(--white-color);
+  background-color: #f5f4fa;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -511,4 +543,16 @@ address a {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
+}
+
+.item .link {
+  display: block;
+}
+.item .link.project-item:hover,
+.item .link.project-item:focus {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
